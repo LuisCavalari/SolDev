@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const InputArea = styled.input`
-  max-width:400px;
+
   width:100%;
   background-color:transparent;
   border:none;

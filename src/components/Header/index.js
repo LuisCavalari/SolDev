@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { HeaderArea, Nav } from './styles';
-import { isAuth } from '../../auth'
+import { isAuth, logout } from '../../auth'
 export default function Header() {
-    const logged = isAuth()
+
+    const [logged,setLogged] = useState(false)
+
+    useEffect(() => {
+        setLogged(isAuth)
+    }, [])
+
+    function endSession() {
+        logout()
+        window.location.reload()
+    }
 
     return (
         <HeaderArea>
@@ -34,7 +44,7 @@ export default function Header() {
                                     <Link to="/">Minha conta</Link>
                                 </li>
 
-                                <li>
+                                <li onClick={endSession}>
                                     <Link to="/">Sair</Link>
                                 </li>
                             </>
@@ -42,10 +52,10 @@ export default function Header() {
                         {!logged &&
                             <>
                                 <li>
-                                    <Link>Login</Link>
+                                    <Link to="/signin">Login</Link>
                                 </li>
                                 <li>
-                                    <Link>Cadastro</Link>
+                                    <Link to="/signup">Cadastro</Link>
                                 </li>
                             </>
                         }

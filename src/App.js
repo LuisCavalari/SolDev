@@ -1,4 +1,5 @@
 import React from 'react';
+import 'font-awesome/css/font-awesome.min.css'
 import Store from './store'
 import Routes from './routes'
 import { Global } from './styles/global'
