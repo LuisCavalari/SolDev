@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const InputArea = styled.input`
-
   width:100%;
   background-color:transparent;
   border:none;

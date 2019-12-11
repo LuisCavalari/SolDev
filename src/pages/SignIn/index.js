@@ -26,6 +26,7 @@ export default function SignIn() {
         password
       })
     const { token, error } = response.data
+
     if (error) {
       setErros(true)
       setErrorMessage(error)
@@ -89,11 +90,11 @@ export default function SignIn() {
           Login
         </Button>
         <div className="row-between">
-          <Link>
-            teste
+          <Link to="forgot_password">
+            Esqueceu sua senha ?
           </Link>
-          <Link>
-            teste
+          <Link to="signup">
+            Cadastrar-se
           </Link>
         </div>
       </form>
