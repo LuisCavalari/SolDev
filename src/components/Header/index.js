@@ -21,13 +21,13 @@ export default function Header() {
                 <Link to="/">
                     <div className="logo">
                         <span className="logo-text">
-                            O
+                            S
                         </span>
                         <span className="logo-text">
-                            L
+                            D
                         </span>
                         <span className="logo-text">
-                            X
+                            V
                         </span>
                     </div>
                 </Link>
